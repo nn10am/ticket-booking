@@ -1,6 +1,6 @@
 # Ignore venv directory
-backend/ticketBooking_api_fastapi_env/
-
+backend/venv
+backend/.env
 # general
 .DS_Store
 Thumbs.db

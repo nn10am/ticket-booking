@@ -28,3 +28,4 @@ Base.metadata.create_all(bind=engine)
 #     except Exception as e:
 #         print(f"Connection failed: {e}")
 #         raise HTTPException(status_code=500, detail="Connection failed: " + str(e))
+

@@ -5,7 +5,8 @@ backend/.env
 .DS_Store
 Thumbs.db
 #__pycache__
-**/__pycache__
+backend/app/__pycache__
+backend/auth/__pycache__
 
 # VS Code Settings
 .vscode/

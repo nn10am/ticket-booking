@@ -2,8 +2,8 @@
 backend/venv
 backend/.env
 
-# helper hashing password fucntion
-backend/utils/generate_hash.py
+# helper hashing password function
+backend/app/utils/generate_hash.py
 # general
 .DS_Store
 Thumbs.db

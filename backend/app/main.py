@@ -1,14 +1,23 @@
-from fastapi import FastAPI, Depends, HTTPException
-from .database import engine, Base, get_db
+from fastapi import FastAPI, Depends, HTTPException, APIRouter
+from .db.base import Base
+from .db.session import engine
 from .auth.routes import router as auth_router
+from .routers.admin import router as admin_router
+from .routers.main import router as main_router
 # from typing import Annotated
 # from sqlalchemy.orm import Session
 # from . import models, crud, schemas
 
 app = FastAPI()
-app.include_router(auth_router, prefix="/auth")
+app.include_router(auth_router, prefix="/auth", tags=["auth"])
+
+app.include_router(admin_router, prefix="/admin", tags=["admin"])
+
+app.include_router(main_router, prefix="/", tags=["main"])
 
 Base.metadata.create_all(bind=engine)
+
+
 
 
 # @app.get("/users/{user_id}", response_model=schemas.User)
@@ -22,7 +31,7 @@ Base.metadata.create_all(bind=engine)
 
 # def check_db_connection(db: Session = Depends(get_db)):
 #     try:
-#         # simple query to check connection
+        
 #         res = db.execute(text("SELECT 1"))
 #         return {"status": "Connection successful!", "result": res.fetchone()}
 #     except Exception as e:

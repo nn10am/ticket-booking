@@ -1,12 +1,41 @@
 # Ignore venv directory
 backend/venv
 backend/.env
+
+# helper hashing password fucntion
+backend/utils/generate_hash.py
 # general
 .DS_Store
 Thumbs.db
-#__pycache__
-backend/app/__pycache__
-backend/auth/__pycache__
+# __pycache__
+backend/tests/__pycache__
+backend/app/auth/__pycache__
+backend/app/core/__pycache__
+backend/app/crud/__pycache__
+backend/app/db/__pycache__
+backend/app/middlewares/__pycache__
+backend/app/models/__pycache__
+backend/app/routers/__pycache__
+backend/app/schemas/__pycache__
+backend/app/services/__pycache__
+backend/app/utils/__pycache__
+
+#__init__.py
+backend/tests/__init__.py
+backend/app/auth/__init__.py
+backend/app/core/__init__.py
+backend/app/crud/__init__.py
+backend/app/db/__init__.py
+backend/app/middlewares/__init__.py
+backend/app/models/__init__.py
+backend/app/routers/__init__.py
+backend/app/schemas/__init__.py
+backend/app/services/__init__.py
+backend/app/utils/__init__.py
+
 
 # VS Code Settings
 .vscode/
+# alembic
+backend/alembic
+backend/alembic.ini
